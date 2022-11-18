@@ -1,0 +1,8 @@
+name: GH Issue action
+on: issues
+jobs:
+  print-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue details
+        run: echo ${{ toJson(github.event) }}
